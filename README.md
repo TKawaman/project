@@ -10,52 +10,52 @@
 
 ``` diff
 java-meetingroom/ ✅ 🟡 🔴
-├── DB/                         # DB関連 ✅ 100% (谷田/川満)
+├── DB/                         # DB関連 ✅ 100% (tanida/kawamitsu)
 │   ├── database.sql            # テーブル定義
 │   └── testdsata.sql           # テスト用データ
 └── src/main/
     ├── java/jp/co/seminar/
-        ├── bean/               # [Model] ✅ 100% (川満/猪本)
-+       │   ├── AppException.java
-+       │   ├── MeetingRoom.java
-+       │   ├── ExtraMR.java
-+       │   ├── LoginUserBean.java
-+       │   ├── UserBean.java
-+       │   ├── RoomBean.java
-+       │   └── ReservationBean.java
+        ├── bean/               # [Model] ✅ 100% 
++       │   ├── AppException.java (kawamitsu/inomoto)
++       │   ├── MeetingRoom.java (inomoto)
++       │   ├── ExtraMR.java (kawamitsu)
++       │   ├── LoginUserBean.java (kawamitsu)
++       │   ├── UserBean.java (kawamitsu)
++       │   ├── RoomBean.java (kawamitsu)
++       │   └── ReservationBean.java (kawamitsu)
         ├── dao/                # [Model] ✅ 100% (川満)
-+       │   ├── ReservationDao.java
-+       │   ├── RoomDao.java
-+       │   ├── UserDao.java
-+       │   └── TestMain.java
++       │   ├── ReservationDao.java (kawamitsu)
++       │   ├── RoomDao.java (kawamitsu)
++       │   └── UserDao.java (kawamitsu)
         ├── filter/             # 共通処理 ✅ 100% (川満/猪本)
-+       │   ├── EncodingFilter.java
-+       │   ├── LoginUrlFilter.java
-+       │   └── SessionFilter.java
++       │   ├── EncodingFilter.java (inomoto)
++       │   ├── LoginUrlFilter.java (kawamitsu)
++       │   └── SessionFilter.java (kawamitsu)
         ├── servlet/main/       # [Controller] ✅ 100% (山崎)
-+       │   ├── ChangeDateServlet.java  # 山﨑 $
-+       │   ├── LoginServlet.java  # 山﨑 $
-+       │   └── LogoutServlet.java  # 山﨑 $
++       │   ├── ChangeDateServlet.java (yamaguti)
++       │   ├── LoginServlet.java  (yamaguti)
++       │   └── LogoutServlet.java  (yamaguti)
         ├── servlet/meetingRoom/# [Controller] ✅ 100% (飯田/谷田)
-+       │   ├── CreateAddMeetingRoom.java  # 山﨑 $
-+       │   ├── CreateMeetingRoom.java  # 山﨑 $
-+       │   ├── DeleteAddMeetingRoom.java  # 山﨑 $
-+       │   └── DeleteMeetingRoom.java  # 山﨑 $
++       │   ├── CreateAddMeetingRoom.java  
++       │   ├── CreateMeetingRoom.java  
++       │   ├── DeleteAddMeetingRoom.java  
++       │   └── DeleteMeetingRoom.java  
         ├── servlet/reservation/# [Controller] ✅ 100% (飯田/石坂)
-+       │   ├── CancelCreateServlet.java  # 山﨑 $
-+       │   ├── CancelServlet.java  # 山﨑 $
-+       │   ├── ReserveCreateServlet.java  # 山﨑 $
-+       │   └── ReserveServlet.java  # 山﨑 $
++       │   ├── CancelCreateServlet.java  
++       │   ├── CancelServlet.java  
++       │   ├── ReserveCreateServlet.java  
++       │   └── ReserveServlet.java  
         ├── servlet/user/       # [Controller] ✅ 100% (川満)
-+       │   ├── CreateAddUserServlet.java
-+       │   ├── CreateUserServlet.java
-+       │   ├── DeleteAddUserServlet.java
-+       │   ├── DeleteUserServlet.java
-+       │   ├── UpdateAddUserServlet.java
-+       │   └── UpdateUserServlet.java
++       │   ├── CreateAddUserServlet.java (kawamitsu)
++       │   ├── CreateUserServlet.java (kawamitsu)
++       │   ├── DeleteAddUserServlet.java (kawamitsu)
++       │   ├── DeleteUserServlet.java (kawamitsu)
++       │   ├── SearchUserServlet.java (kawamitsu)
++       │   ├── UpdateAddUserServlet.java (kawamitsu)
++       │   └── UpdateUserServlet.java (kawamitsu)
         └── util/               # 共通DB接続 ✅ 100% (川満)
-+           ├── DatabaseConfig.java
-+           └── DatabaseConnection.java
++           ├── DatabaseConfig.java (kawamitsu)
++           └── DatabaseConnection.java (kawamitsu)
     └── webapp/
 +       ├── css/style.css       # CSSデザイン ✅ 100% (猪本)
         └── jsp/                # [View] 画面表示
@@ -80,12 +80,13 @@ java-meetingroom/ ✅ 🟡 🔴
 +           │   ├── reserveInput.jsp
 +           │   └── reserved.jsp
             └── userSituation/  # ユーザ管理  ✅ 100% (川満)
-+               ├── userCompletion.jsp
-+               ├── userConfirm.jsp
-+               ├── userCreate.jsp
-+               ├── userDelete.jsp
-+               ├── userError.jsp
-+               └── userUpdate.jsp
++               ├── userCompletion.jsp (kawamitsu)
++               ├── userConfirm.jsp (kawamitsu)
++               ├── userCreate.jsp (kawamitsu)
++               ├── userDelete.jsp (kawamitsu)
++               ├── userError.jsp (kawamitsu)
++               ├── userSearch.jsp  (kawamitsu)
++               └── userUpdate.jsp (kawamitsu)
 ```
 
 | name | Commit | 追加 | 削除 | 合計差分 | 
