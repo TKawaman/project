@@ -1,3 +1,11 @@
+### チーム役職
+- 川満(リーダー) 進捗管理,DAO,Bean,DB,追加仕様service,Exeption,Filter,User系Servlet,User系JSP
+- 猪本(テックリーダー) Git管理,メインservice,Exeption,CSS,Filter
+- 谷田(ドキュメント) 
+- 飯田(文書管理)
+- 山崎(メンバー)
+- 石坂(メンバー)
+
 ### タスク進捗
 | ﾒﾝﾊﾞｰ | jsp | 進捗率 | 処理1 | 進捗率 | 処理2 | 進捗率 | 特定作業 | 進捗率 |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | 
@@ -10,64 +18,63 @@
 
 ``` diff
 java-meetingroom/ ✅ 🟡 🔴
-├── DB/                         # DB関連 ✅ 100% (tanida/kawamitsu)
+├── DB/                         # DB関連 ✅ 100% (谷田/川満)
 │   ├── database.sql            # テーブル定義
 │   └── testdsata.sql           # テスト用データ
 └── src/main/
     ├── java/jp/co/seminar/
-        ├── bean/               # [Model] ✅ 100% 
-+       │   ├── AppException.java (kawamitsu/inomoto)
-+       │   ├── MeetingRoom.java (inomoto)
-+       │   ├── ExtraMR.java (kawamitsu)
-+       │   ├── LoginUserBean.java (kawamitsu)
-+       │   ├── UserBean.java (kawamitsu)
-+       │   ├── RoomBean.java (kawamitsu)
-+       │   └── ReservationBean.java (kawamitsu)
+        ├── bean/               # [Model] ✅ 100% (川満/猪本)
++       │   ├── AppException.java 猪本(基本)/川満(追加)
++       │   ├── MeetingRoom.java 猪本(基本Service)
++       │   ├── ExtraMR.java 川満(追加Service)
++       │   ├── LoginUserBean.java 川満
++       │   ├── UserBean.java 川満
++       │   ├── RoomBean.java 川満
++       │   └── ReservationBean.java 川満
         ├── dao/                # [Model] ✅ 100% (川満)
-+       │   ├── ReservationDao.java (kawamitsu)
-+       │   ├── RoomDao.java (kawamitsu)
-+       │   └── UserDao.java (kawamitsu)
++       │   ├── ReservationDao.java 川満
++       │   ├── RoomDao.java 川満
++       │   └── UserDao.java 川満
         ├── filter/             # 共通処理 ✅ 100% (川満/猪本)
-+       │   ├── EncodingFilter.java (inomoto)
-+       │   ├── LoginUrlFilter.java (kawamitsu)
-+       │   └── SessionFilter.java (kawamitsu)
++       │   ├── EncodingFilter.java 猪本
++       │   ├── LoginUrlFilter.java 川満
++       │   └── SessionFilter.java 川満
         ├── servlet/main/       # [Controller] ✅ 100% (山崎)
-+       │   ├── ChangeDateServlet.java (yamaguti)
-+       │   ├── LoginServlet.java  (yamaguti)
-+       │   └── LogoutServlet.java  (yamaguti)
-        ├── servlet/meetingRoom/# [Controller] ✅ 100% (飯田/谷田)
-+       │   ├── CreateAddMeetingRoom.java  
-+       │   ├── CreateMeetingRoom.java  
-+       │   ├── DeleteAddMeetingRoom.java  
-+       │   └── DeleteMeetingRoom.java  
++       │   ├── ChangeDateServlet.java 山崎
++       │   ├── LoginServlet.java 山﨑
++       │   └── LogoutServlet.java 山﨑
+        ├── servlet/meetingRoom/# [Controller] ✅ 100% (猪本/谷田)
++       │   ├── CreateAddMeetingRoom.java 猪本
++       │   ├── CreateMeetingRoom.java 猪本
++       │   ├── DeleteAddMeetingRoom.java 谷田
++       │   └── DeleteMeetingRoom.java 谷田
         ├── servlet/reservation/# [Controller] ✅ 100% (飯田/石坂)
-+       │   ├── CancelCreateServlet.java  
-+       │   ├── CancelServlet.java  
-+       │   ├── ReserveCreateServlet.java  
-+       │   └── ReserveServlet.java  
++       │   ├── CancelCreateServlet.java 飯田
++       │   ├── CancelServlet.java 飯田
++       │   ├── ReserveCreateServlet.java 石坂
++       │   └── ReserveServlet.java 石坂
         ├── servlet/user/       # [Controller] ✅ 100% (川満)
-+       │   ├── CreateAddUserServlet.java (kawamitsu)
-+       │   ├── CreateUserServlet.java (kawamitsu)
-+       │   ├── DeleteAddUserServlet.java (kawamitsu)
-+       │   ├── DeleteUserServlet.java (kawamitsu)
-+       │   ├── SearchUserServlet.java (kawamitsu)
-+       │   ├── UpdateAddUserServlet.java (kawamitsu)
-+       │   └── UpdateUserServlet.java (kawamitsu)
++       │   ├── CreateAddUserServlet.java 川満
++       │   ├── CreateUserServlet.java 川満
++       │   ├── DeleteAddUserServlet.java 川満
++       │   ├── DeleteUserServlet.java 川満
++       │   ├── UpdateAddUserServlet.java 川満
++       │   └── UpdateUserServlet.java 川満
         └── util/               # 共通DB接続 ✅ 100% (川満)
-+           ├── DatabaseConfig.java (kawamitsu)
-+           └── DatabaseConnection.java (kawamitsu)
++           ├── DatabaseConfig.java 川満
++           └── DatabaseConnection.java 川満
     └── webapp/
 +       ├── css/style.css       # CSSデザイン ✅ 100% (猪本)
         └── jsp/                # [View] 画面表示
 +           ├── login.jsp       # ログイン    ✅ 100% (山崎)
 +           ├── menu.jsp        # メニュー    ✅ 100% (山崎)
             ├── cancel/         # 予約取消    ✅ 100% (飯田)
-+           │   ├── cancelConfirm.jsp
-+           │   ├── cancelError.jsp
-+           │   ├── cancelInput.jsp
-+           │   └── canceled.jsp
++           │   ├── cancelConfirm.jsp 飯田
++           │   ├── cancelError.jsp 飯田
++           │   ├── cancelInput.jsp 飯田
++           │   └── canceled.jsp 飯田
             ├── includeFile/    # 共通部品 ✅ 100% (猪本/石坂)
-+           │   └── includeUserName.jsp
++           │   └── includeUserName.jsp 石坂
             ├── meetingRoom/    # 会議室管理 ✅ 100% (猪本/石坂)
 +           │   ├── meetingRoomCompletion.jsp
 +           │   ├── meetingRoomConfirm.jsp
@@ -75,23 +82,22 @@ java-meetingroom/ ✅ 🟡 🔴
 +           │   ├── meetingRoomError.jsp
 +           │   └── meetingRoomInput.jsp
             ├── reservation/    # 予約登録    ✅ 100% (石坂)
-+           │   ├── reserveConfirm.jsp
-+           │   ├── reserveError.jsp
-+           │   ├── reserveInput.jsp
-+           │   └── reserved.jsp
++           │   ├── reserveConfirm.jsp 石坂
++           │   ├── reserveError.jsp 石坂
++           │   ├── reserveInput.jsp 石坂
++           │   └── reserved.jsp 石坂
             └── userSituation/  # ユーザ管理  ✅ 100% (川満)
-+               ├── userCompletion.jsp (kawamitsu)
-+               ├── userConfirm.jsp (kawamitsu)
-+               ├── userCreate.jsp (kawamitsu)
-+               ├── userDelete.jsp (kawamitsu)
-+               ├── userError.jsp (kawamitsu)
-+               ├── userSearch.jsp  (kawamitsu)
-+               └── userUpdate.jsp (kawamitsu)
++               ├── userCompletion.jsp 川満
++               ├── userConfirm.jsp 川満
++               ├── userCreate.jsp 川満
++               ├── userDelete.jsp 川満
++               ├── userError.jsp 川満
++               └── userUpdate.jsp 川満
 ```
 
 | name | Commit | 追加 | 削除 | 合計差分 | 
 | :--- | ---: | ---: | ---: | ---: |
-| kawamitsu | 92 | 5246 | 2890 | 2356 |
+| kawamitsu | 93 | 5247 | 2891 | 2356 |
 | inomoto   | 80 | 3247 | 1205 | 2042 |
 | ishizaka  | 64 | 1602 | 987  | 615  |
 | tanida    | 47 | 1772 | 1260 | 512  |
@@ -113,8 +119,8 @@ java-meetingroom/ ✅ 🟡 🔴
 | 1/23 | 66 | 4557 | 1704 | 2853 | 111 |
 | 1/24 | - | - | - | - | - |
 | 1/25 | 67 | 4803 | 1960 | 2843 | -10 |
-| 1/26 | - | - | - | - | - |
-| 1/27 | - | - | - | - | - |
+| 1/26 | 86 | 5124 | 2119 | 3005 | 162 |
+| 1/27 | 93 | 5247 | 2891 | 2356 | -649 |
 
 ### 2. inomoto
 | Date | Commit | 追加 | 削除 | 合計差分 | 増加数 |
@@ -130,8 +136,8 @@ java-meetingroom/ ✅ 🟡 🔴
 | 1/23 | 79 | 3243 | 1203 | 2040 | 0 |
 | 1/24 | - | - | - | - | - |
 | 1/25 | - | - | - | - | - |
-| 1/26 | - | - | - | - | - |
-| 1/27 | - | - | - | - | - |
+| 1/26 | 80 | 3247 | 1205 | 2042 | 2 |
+| 1/27 | 80 | 3247 | 1205 | 2042 | 0 |
 
 ### 3. tanida
 | Date | Commit | 追加 | 削除 | 合計差分 | 増加数 |
@@ -147,8 +153,8 @@ java-meetingroom/ ✅ 🟡 🔴
 | 1/23 | 47 | 1772 | 1260 | 512 | -15 |
 | 1/24 | - | - | - | - | - |
 | 1/25 | - | - | - | - | - |
-| 1/26 | - | - | - | - | - |
-| 1/27 | - | - | - | - | - |
+| 1/26 | 47 | 1772 | 1260 | 512 | 0 |
+| 1/27 | 47 | 1772 | 1260 | 512 | 0 |
 
 ### 4. ishizaka
 | Date | Commit | 追加 | 削除 | 合計差分 | 増加数 |
@@ -164,8 +170,8 @@ java-meetingroom/ ✅ 🟡 🔴
 | 1/23 | 48 | 1287 | 803 | 484 | 4 |
 | 1/24 | - | - | - | - | - |
 | 1/25 | - | - | - | - | - |
-| 1/26 | - | - | - | - | - |
-| 1/27 | - | - | - | - | - |
+| 1/26 | 59 | 1463 | 866 | 597 | 113 |
+| 1/27 | 64 | 1602 | 987 | 615 | 18 |
 
 ### 5. ida
 | Date | Commit | 追加 | 削除 | 合計差分 | 増加数 |
@@ -181,8 +187,8 @@ java-meetingroom/ ✅ 🟡 🔴
 | 1/23 | 47 | 970 | 562 | 408 | -25 |
 | 1/24 | - | - | - | - | - |
 | 1/25 | - | - | - | - | - |
-| 1/26 | - | - | - | - | - |
-| 1/27 | - | - | - | - | - |
+| 1/26 | 64 | 1602 | 987 | 615 | 207 |
+| 1/27 | 52 | 1031 | 614 | 417 | -198 |
 
 ### 6. yamazaki
 | Date | Commit | 追加 | 削除 | 合計差分 | 増加数 |
@@ -198,5 +204,5 @@ java-meetingroom/ ✅ 🟡 🔴
 | 1/23 | 58 | 767 | 421 | 346 | -16 |
 | 1/24 | - | - | - | - | - |
 | 1/25 | - | - | - | - | - |
-| 1/26 | - | - | - | - | - |
-| 1/27 | - | - | - | - | - |
+| 1/26 | 58 | 767  | 421 | 346 | 0 |
+| 1/27 | 58 | 767  | 421 | 346 | 0 |
